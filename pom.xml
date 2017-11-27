@@ -8,7 +8,6 @@
     <artifactId>address-book</artifactId>
     <version>DEV-SNAPSHOT</version>
 
-
     <dependencies>
         <dependency>
             <groupId>org.apache.commons</groupId>
