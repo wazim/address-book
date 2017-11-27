@@ -3,6 +3,7 @@ package net.wazim.addressbook;
 import net.wazim.addressbook.domain.Gender;
 import net.wazim.addressbook.domain.Person;
 
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 
@@ -12,7 +13,9 @@ public class ApplicationRunner {
         FileReader fileReader = new FileReader();
         AddressBookParser addressBookParser = new AddressBookParser();
 
-        List<String> addressBookContent = fileReader.readFile(Paths.get(args[0]));
+        Path addressBookInputFile = Paths.get(args[0]);
+
+        List<String> addressBookContent = fileReader.readFile(addressBookInputFile);
         List<Person> addressContacts = addressBookParser.toAddressContacts(addressBookContent);
 
         AddressBook addressBook = new AddressBook(addressContacts);
