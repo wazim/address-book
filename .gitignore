@@ -18,6 +18,9 @@
 .idea/**/sqlDataSources.xml
 .idea/**/dynamic.xml
 .idea/**/uiDesigner.xml
+.idea/*.xml
+.idea/copyright
+.idea/.name
 *.iml
 
 # Gradle:
